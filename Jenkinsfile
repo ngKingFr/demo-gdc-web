@@ -1,22 +1,15 @@
-pipeline {
-    agent any
+node {
 
-    stages {
-        stage('checkout') {
-            steps {
-                sh 'npm --version'
-              	sh 'node --version'
-            }
-        }
-        stage('install'){
-            steps {
-                sh 'npm install'
-            }
-        }
-        stage('build') {
-            steps {
-                sh 'ng build -prod'
-            }
-        }
+    stage('checkout') {
+        sh 'npm --version'
+        sh 'node --version'
     }
-}
+
+    stage('install'){
+        sh 'npm install'
+    }
+
+    stage('build') {
+
+        sh 'ng build -prod'
+    }
