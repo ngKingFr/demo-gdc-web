@@ -6,7 +6,7 @@ node {
    credentials('git-gdc-demo')
 
    triggers {
-        cron(H/1 * * * *)
+        cron('H/1 * * * *')
    }
 
     stage('checkout') {
