@@ -1,7 +1,7 @@
 node {
 
 
-   env.NODE_HOME="${tool 'node-8.X}"
+   env.NODE_HOME="${tool 'node-8.X'}"
     env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
     sh 'npm -version'
 
