@@ -1,9 +1,7 @@
 node {
 
-
-   env.NODE_HOME="${tool 'node-8.X'}"
-    env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
-    sh 'npm -version'
+   env.NODE_HOME="${tool 'node-7.X'}"
+   env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
 
     stage('checkout') {
         sh 'npm --version'
