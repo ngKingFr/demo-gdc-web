@@ -5,10 +5,6 @@ node {
    git([url: 'https://github.com/ngKingFr/demo-gdc-web.git', branch: 'master'])
    credentials('git-gdc-demo')
 
-   triggers {
-        cron('H/1 * * * *')
-   }
-
     stage('checkout') {
         sh 'npm --version'
         sh 'node --version'
