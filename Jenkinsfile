@@ -13,3 +13,4 @@ node {
 
         sh 'ng build -prod'
     }
+}
