@@ -1,21 +1,21 @@
 node {
 
-    stages {
-            nodejs(nodeJSInstallationName: 'node-8.X')
-            stage('checkout') {
-                sh 'npm --version'
-                sh 'node --version'
-            }
 
-            stage('install'){
-                sh 'npm install'
-            }
+   env.NODE_HOME="${tool 'node-8.X}"
+    env.PATH="${env.NODE_HOME}/bin:${env.PATH}"
+    sh 'npm -version'
 
-            stage('build') {
-
-                sh 'ng build -prod'
-            }
+    stage('checkout') {
+        sh 'npm --version'
+        sh 'node --version'
     }
 
+    stage('install'){
+        sh 'npm install'
+    }
 
+    stage('build') {
+
+        sh 'ng build -prod'
+    }
 }
