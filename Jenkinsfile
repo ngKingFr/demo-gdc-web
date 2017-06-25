@@ -1,5 +1,8 @@
 node {
-
+    agent any
+        tools {
+            nodejs 'node 8.X'
+        }
     stage('checkout') {
         sh 'npm --version'
         sh 'node --version'
